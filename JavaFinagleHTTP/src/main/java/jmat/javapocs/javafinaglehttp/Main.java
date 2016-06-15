@@ -10,7 +10,6 @@ import com.twitter.finagle.http.Status;
 import com.twitter.util.Await;
 import com.twitter.util.Future;
 import com.twitter.util.FutureEventListener;
-import java.nio.charset.StandardCharsets;
 
 public class Main {
 
