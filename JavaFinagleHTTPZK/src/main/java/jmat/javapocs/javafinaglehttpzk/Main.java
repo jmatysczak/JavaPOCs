@@ -1,4 +1,7 @@
-package jmat.javapocs.javafinaglehttp;
+/**
+ * NOTE: Requires Zookeeper to be running on the standard port.
+ */
+package jmat.javapocs.javafinaglehttpzk;
 
 import com.twitter.finagle.Http;
 import com.twitter.finagle.ListeningServer;
@@ -14,10 +17,10 @@ import com.twitter.util.FutureEventListener;
 public class Main {
 
     public static void main(final String[] args) throws Exception {
-        final String address = "localhost:9000";
+        final String address = "zk!localhost:2181!/jmat/javapocs/javafinaglehttpzk/1.0/http";
 
         final ListeningServer server = Http.serve(
-                address,
+                "localhost:9000",
                 new Service<Request, Response>() {
 
                     @Override
@@ -36,13 +39,15 @@ public class Main {
                 }
         );
 
-        System.out.println("Serving...");
+        Await.ready(server.announce(address + "!0"));
+
+        System.out.println("Serving on " + server.boundAddress() + "...");
 
         final Request request = Request.apply(Methods.POST, address);
         request.setContentString("Hello Request");
         request.setUri("/foo?bar=baz");
 
-        final Service<Request, Response> client = Http.newService(address);
+        final Service<Request, Response> client = Http.client().newService(address);
 
         final Future<Response> response = client.apply(request);
 
@@ -64,7 +69,7 @@ public class Main {
 
         Await.ready(response);
 
-        // Await.ready(server);
+        //Await.ready(server);
         System.out.println("Done.");
     }
 }
