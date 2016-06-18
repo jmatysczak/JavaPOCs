@@ -10,6 +10,9 @@ Example of creating a HTTP client and server using Finagle.
 #### JavaFinagleHTTPZK
 Example of creating a HTTP client and server using Finagle where the client finds the server via Zookeeper.
 
+#### JavaFinagleThrift
+Example of creating a thrift client and server using Finagle.
+
 #### ServiceLoader
 Example of how to use java.util.ServiceLoader to dynamicly load "service" classes that adhere to an interface.
 <strong>ServiceInterfaceExample:</strong> Defines a service interface.<br/>
