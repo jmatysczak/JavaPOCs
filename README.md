@@ -27,3 +27,6 @@ Example of how to use java.util.ServiceLoader to dynamicly load "service" classe
 <strong>ServiceInterfaceExample:</strong> Defines a service interface.<br/>
 <strong>ServiceLoaderExample:</strong> Loads all services that implement the service interface and executes them.<br/>
 <strong>ServiceProviderExample:</strong> Implements the service interface.<br/>
+
+#### WalkFileTree
+Example of various java.nio.file.Files file tree walking methods.
