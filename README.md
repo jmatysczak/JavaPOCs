@@ -4,6 +4,9 @@
 Compare the size and speed of BitSet, HashMap, and HashSet for a specific use case. Also demonstrates how to get the
 actual size of an object graph as well as how to specify a Java Agent when running via Maven.
 
+#### EmbeddedElasticsearch
+Example of using an embedded Elasticsearch instance.
+
 #### GuiceBindingOverriding
 Two ways to override/replace an implementation in Guice.
 
