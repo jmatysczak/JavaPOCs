@@ -22,6 +22,9 @@ Example of creating a thrift client and server using Finagle.
 #### JDKHttpServer
 Example of using the HTTP server that comes with the JDK (com.sun.net.httpserver.HttpServer).
 
+#### MongoSparkConnector
+Example of how to unit/integration test the Mongo Spark Connector.
+
 #### ServiceLoader
 Example of how to use java.util.ServiceLoader to dynamicly load "service" classes that adhere to an interface.
 <strong>ServiceInterfaceExample:</strong> Defines a service interface.<br/>
