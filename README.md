@@ -7,6 +7,9 @@ actual size of an object graph as well as how to specify a Java Agent when runni
 #### EmbeddedElasticsearch
 Example of using an embedded Elasticsearch instance.
 
+#### EmbeddedZookeeperAndKafka
+Example of embedding Zookeeper and Kafka in an integration test. This also shows how to write to Kafka from Spark.
+
 #### GuiceBindingOverriding
 Two ways to override/replace an implementation in Guice.
 
