@@ -31,6 +31,9 @@ Example of using the HTTP server that comes with the JDK (com.sun.net.httpserver
 #### MongoSparkConnector
 Example of how to unit/integration test the Mongo Spark Connector.
 
+#### PrestoSqlParser
+Example of using Facebook's Presto SQL parser to parse create table statements.
+
 #### ServiceLoader
 Example of how to use java.util.ServiceLoader to dynamicly load "service" classes that adhere to an interface.
 <strong>ServiceInterfaceExample:</strong> Defines a service interface.<br/>
